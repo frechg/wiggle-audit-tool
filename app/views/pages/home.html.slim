@@ -3,8 +3,8 @@
 
 section.home
   .inner-wrapper
-    = link_to list_path, class: 'inbound-rl route-list' do
-      h2 Inbound to Downtown
+    = link_to list_path, class: 'outbound-rl route-list' do
+      h2 Outbound to Ocean
       .stats
         span.stat
           | Blocks:
@@ -17,8 +17,8 @@ section.home
           | /
           span 0
 
-    = link_to '#', class: 'outbound-rl route-list' do
-      h2 Outbound to Ocean Beach
+    = link_to '#', class: 'inbound-rl route-list' do
+      h2 Inbound to Downtown
       .stats
         span.stat
           | Blocks:

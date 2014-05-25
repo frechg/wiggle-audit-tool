@@ -9,21 +9,39 @@ header.global {
   background: rgba(39, 42, 49, 0.9);;
   border-bottom: 1px solid rgba(0,0,0,0.2);
   height: 54px;
-  padding: 0.8em 1em;
   z-index: 10;
 
+  a.back {
+    color: rgba(255,255,255, 0.5);
+    float: left;
+    font-size: 1.8em;
+    line-height: 54px;
+    padding: 0 0.6em;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
   h1 {
+    @include position(absolute, 0px 0 0 0px);
     color: rgba(255,255,255, 0.5);
     font-size: 1.2em;
     font-weight: 300;
     letter-spacing: 1px;
-    margin-top: 0.1em;
+    line-height: 54px;
     text-align: center;
+    width: 100%;
+    z-index: 1;
   }
 
   .current-location {
-    margin-top: -4px;
+    @include position(absolute, 0px 0 0px 0px);
+    padding-top: 0.5em;
     text-align: center;
+    width: 100%;
 
     span.type {
       color: rgba(255,255,255, 0.3);
@@ -32,7 +50,6 @@ header.global {
       font-weight: 800;
       letter-spacing: 1px;
       line-height: normal;
-      margin-bottom: 0.1em;
       text-transform: uppercase;
     }
 
@@ -49,16 +66,6 @@ header.global {
         margin: 0 0.6em 0.2em;
         vertical-align: middle;
       }
-    }
-  }
-
-  a.back {
-    color: rgba(255,255,255, 0.5);
-    float: left;
-    font-size: 1.8em;
-
-    &:hover {
-      color: #fff;
     }
   }
 }

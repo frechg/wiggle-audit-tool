@@ -16,9 +16,10 @@
 a.route-list {
   background: rgb(248,248,248);
   border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 3px 0 -1px rgba(0,0,0,0.3);
   display: block;
   padding: 0.7em 1em;
-  margin: 0 1em 1.5em 1em;
+  margin: 0 0.6em 1.5em 0.6em;
 
   h2 {
     font-weight: 300;

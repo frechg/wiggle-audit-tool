@@ -20,12 +20,16 @@ $medium-gray: rgb(180,180,180);
 $light-gray: #DDD;
 
 $light-red: #FBE3E4;
-$light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+$aqua: #7FDBFF;
 $blue: #0074D9;
 $green: #2ECC40;
-$purple: rgb(180, 47, 180);
+$lime: #01FF70;
+$purple: #B10DC9;
+$teal: #39CCCC;
+$yellow: #FFDC00;
+$light-yellow: lighten($yellow, 15%);
 
 // Body Color
 $base-body-color: white;

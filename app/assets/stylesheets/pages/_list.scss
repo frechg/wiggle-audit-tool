@@ -1,15 +1,16 @@
 ul.audit-locations {
   background: #fff;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 3px 0 -1px rgba(0,0,0,0.3);
   border-radius: 3px;
-  margin: 0.6em;
+  margin: 0;
+  padding: 0;
 
   li.location {
     border-bottom: 1px solid $base-border-color;
     position: relative;
 
     &:before {
-      @include position(absolute, 0em 0 0em 25px);
+      @include position(absolute, 0em 0 0em 19px);
       background-color: $base-border-color;
       content: '';
       display: block;
@@ -31,13 +32,14 @@ ul.audit-locations {
     }
 
     &:last-child {
+      border-bottom: none;
       border-radius: 0 0 3px 3px;
     }
 
     > a {
       color: $base-font-color;
       display: block;
-      padding: 0.8em 1em 0.8em;
+      padding: 0.7em 1em 0.9em;
       position: relative;
 
       &:hover {
@@ -47,7 +49,7 @@ ul.audit-locations {
   }
 
   .status {
-    @include position(absolute, 1.2em 0 0 0.9em);
+    @include position(absolute, 1.2em 0 0 8px);
     @include size(20px);
     background-color: #fff;
     border: 2px solid $base-border-color;
@@ -55,18 +57,18 @@ ul.audit-locations {
     z-index: 2;
 
     &.started {
-      background-color: $blue;
-      border-color: darken($blue, 10%);
+      background-color: $aqua;
+      border-color: darken($aqua, 8%);
     }
 
     &.finished {
-      background-color: $green;
-      border-color: darken($green, 10%);
+      background-color: $lime;
+      border-color: darken($lime, 6%);
     }
   }
 
   .info {
-    margin-left: 2.4em;
+    margin-left: 1.6em;
     line-height: normal;
     overflow: hidden;
 
