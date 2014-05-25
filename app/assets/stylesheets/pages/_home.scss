@@ -1,0 +1,51 @@
+.home {
+  display: table;
+  height: 100%;
+  width: 100%;
+  padding: 1.5em 0em;
+
+  .inner-wrapper {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding-top: 2em;
+  }
+}
+
+a.route-list {
+  background: rgb(248,248,248);
+  border-radius: 3px;
+  display: block;
+  padding: 0.7em 1em;
+  margin: 0 1em 1.5em 1em;
+
+  h2 {
+    font-weight: 300;
+    font-size: 1.6em;
+  }
+
+  .stats {
+    color: $light-font-color;
+    letter-spacing: 1px;
+
+    span.stat {
+      & + span.stat {
+        margin-left: 1em;
+      }
+
+      > span {
+        font-weight: bold;
+
+        &.complete {
+          color: $blue;
+          margin-left: 0.4em;
+
+          &.all {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+- content_for :header do
+  h1 Wiggle Audit Tool
+
+section.home
+  .inner-wrapper
+    = link_to '#', class: 'inbound-rl route-list' do
+      h2 Inbound to Downtown
+      .stats
+        span.stat
+          | Blocks:
+          span.complete 0
+          | /
+          span 0
+        span.stat
+          | Intersections:
+          span.complete 0
+          | /
+          span 0
+
+    = link_to '#', class: 'outbound-rl route-list' do
+      h2 Outbound to Ocean Beach
+      .stats
+        span.stat
+          | Blocks:
+          span.complete 0
+          | /
+          span 0
+        span.stat
+          | Intersections:
+          span.complete 0
+          | /
+          span 0

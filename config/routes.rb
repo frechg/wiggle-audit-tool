@@ -1,3 +1,3 @@
 WiggleAuditTool::Application.routes.draw do
-  root 'home#index'
+  root 'pages#home'
 end
