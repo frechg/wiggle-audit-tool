@@ -12,3 +12,17 @@
 
 .padded-wrapper
   section.audit-questions
+    ul.questions
+      - 3.times do
+        li.question
+          p.question Is there a bike lane present?
+          .options-group
+            .input-wrapper
+              input type='radio'
+              label Yes
+            .input-wrapper
+              input type='radio'
+              label No
+            .input-wrapper
+              input type='radio'
+              label What is a bike lane?

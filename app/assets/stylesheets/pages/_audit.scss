@@ -2,5 +2,55 @@ section.audit-questions {
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 3px 0 -1px rgba(0,0,0,0.3);
   border-radius: 3px;
-  padding: 0.4em;
+
+  ul.questions {
+    li.question {
+      border-bottom: 1px solid $base-border-color;
+      padding: 1.4em 1em 1.4em 1.2em;
+      position: relative;
+
+      &:before {
+        @include position(absolute, 26px 0 0 -2px);
+        background: $medium-gray;
+        border: 1px solid darken($medium-gray, 10%);
+        border-radius: 0 3px 3px 0;
+        content: '';
+        display: none;
+        height: 12px;
+        width: 10px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  p.question {
+    font-weight: bold;
+  }
+
+  .options-group {
+  }
+
+  .input-wrapper {
+    margin-bottom: 0.4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  label {
+    display: inline-block;
+    font-weight: 300;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  input {
+    display: inline-block;
+    margin: 0 0.4em 0.1em 0;
+    vertical-align: middle;
+  }
 }
