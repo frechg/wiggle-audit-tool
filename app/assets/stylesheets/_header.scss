@@ -21,6 +21,37 @@ header.global {
     text-align: center;
   }
 
+  .current-location {
+    margin-top: -4px;
+    text-align: center;
+
+    span.type {
+      color: rgba(255,255,255, 0.3);
+      display: block;
+      font-size: 0.7em;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: normal;
+      margin-bottom: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: rgba(255,255,255, 0.5);
+      font-size: 1.1em;
+      font-weight: 300;
+      letter-spacing: 1px;
+      vertical-align: middle;
+
+      i.fa {
+        display: inline-block;
+        font-size: 0.7em;
+        margin: 0 0.6em 0.2em;
+        vertical-align: middle;
+      }
+    }
+  }
+
   a.back {
     color: rgba(255,255,255, 0.5);
     float: left;

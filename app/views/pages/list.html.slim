@@ -8,7 +8,7 @@
 ul.audit-locations
   - 10.times do
     li.location
-      = link_to '#' do
+      = link_to audit_path do
         .status
         .info
           span.type Block
@@ -17,14 +17,14 @@ ul.audit-locations
             i.fa.fa-arrow-right
             span.end Market & 4th
     li.location
-      = link_to '#' do
+      = link_to audit_path do
         .status.started
         .info
           span.type Intersection
           h3
             span.end Market & 4th
     li.location
-      = link_to '#' do
+      = link_to audit_path do
         .status.finished
         .info
           span.type Block

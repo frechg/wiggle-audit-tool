@@ -1,5 +1,8 @@
 ul.audit-locations {
   background: #fff;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  margin: 0.6em;
 
   li.location {
     border-bottom: 1px solid $base-border-color;
@@ -21,6 +24,14 @@ ul.audit-locations {
       display: block;
       font-family: "FontAwesome";
       font-size: 2em;
+    }
+
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 3px 3px;
     }
 
     > a {
