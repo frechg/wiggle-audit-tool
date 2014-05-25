@@ -10,6 +10,7 @@
 
 @import 'header';
 @import 'pages/home';
+@import 'pages/list';
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -28,4 +29,6 @@ html {
   margin: 0 auto;
   max-width: 800px;
   min-height: 100%;
+  position: relative;
+  z-index: 1;
 }

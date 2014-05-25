@@ -1,0 +1,34 @@
+- content_for :header do
+  = link_to root_path, class: 'back' do
+    i.fa.fa-angle-left
+  h1 Outbound to Ocean beach
+
+.header-spacer
+
+ul.audit-locations
+  - 10.times do
+    li.location
+      = link_to '#' do
+        .status
+        .info
+          span.type Block
+          h3
+            span.start Market & 3rd
+            i.fa.fa-arrow-right
+            span.end Market & 4th
+    li.location
+      = link_to '#' do
+        .status.started
+        .info
+          span.type Intersection
+          h3
+            span.end Market & 4th
+    li.location
+      = link_to '#' do
+        .status.finished
+        .info
+          span.type Block
+          h3
+            span.start Market: 3rd
+            i.fa.fa-arrow-right
+            span.end 4th

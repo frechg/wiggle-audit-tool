@@ -1,0 +1,85 @@
+ul.audit-locations {
+  background: #fff;
+
+  li.location {
+    border-bottom: 1px solid $base-border-color;
+    position: relative;
+
+    &:before {
+      @include position(absolute, 0em 0 0em 25px);
+      background-color: $base-border-color;
+      content: '';
+      display: block;
+      width: 2px;
+      z-index: 1;
+    }
+
+    &:after {
+      @include position(absolute, 0.7em 0.3em 0 0);
+      content: '\f105';
+      color: $light-gray;
+      display: block;
+      font-family: "FontAwesome";
+      font-size: 2em;
+    }
+
+    > a {
+      color: $base-font-color;
+      display: block;
+      padding: 0.8em 1em 0.8em;
+      position: relative;
+
+      &:hover {
+        color: $base-accent-color;
+      }
+    }
+  }
+
+  .status {
+    @include position(absolute, 1.2em 0 0 0.9em);
+    @include size(20px);
+    background-color: #fff;
+    border: 2px solid $base-border-color;
+    border-radius: 50%;
+    z-index: 2;
+
+    &.started {
+      background-color: $blue;
+      border-color: darken($blue, 10%);
+    }
+
+    &.finished {
+      background-color: $green;
+      border-color: darken($green, 10%);
+    }
+  }
+
+  .info {
+    margin-left: 2.4em;
+    line-height: normal;
+    overflow: hidden;
+
+    span.type {
+      color: $light-font-color;
+      display: block;
+      font-size: 0.7em;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: normal;
+      margin-bottom: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: normal;
+
+      i.fa {
+        color: $light-gray;
+        font-size: 0.9em;
+        margin: 0 0.6em 0 0.7em;
+      }
+    }
+  }
+}
