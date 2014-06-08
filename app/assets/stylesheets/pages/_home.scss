@@ -14,12 +14,18 @@
 }
 
 a.route-list {
-  background: rgb(248,248,248);
+  background: rgb(255,255,255);
   border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 3px 0 -1px rgba(0,0,0,0.3);
+  border: 1px solid $base-border-color;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  color: $base-font-color;
   display: block;
   padding: 0.7em 1em;
   margin: 0 0.6em 1.5em 0.6em;
+
+  &:hover {
+    color: $blue;
+  }
 
   h2 {
     font-weight: 300;
@@ -39,12 +45,8 @@ a.route-list {
         font-weight: bold;
 
         &.complete {
-          color: $blue;
+          color: $teal;
           margin-left: 0.4em;
-
-          &.all {
-            color: $green;
-          }
         }
       }
     }

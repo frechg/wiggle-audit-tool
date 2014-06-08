@@ -1,6 +1,7 @@
 ul.audit-locations {
   background: #fff;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 3px 0 -1px rgba(0,0,0,0.3);
+  border: 1px solid $base-border-color;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   border-radius: 3px;
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@ ul.audit-locations {
     }
 
     &:after {
-      @include position(absolute, 0.7em 0.3em 0 0);
+      @include position(absolute, 0.6em 0.3em 0 0);
       content: '\f105';
       color: $light-gray;
       display: block;
@@ -57,13 +58,13 @@ ul.audit-locations {
     z-index: 2;
 
     &.started {
-      background-color: $aqua;
-      border-color: darken($aqua, 8%);
+      background-color: lighten($aqua, 20%);
+      border-color: $aqua;
     }
 
     &.finished {
-      background-color: $lime;
-      border-color: darken($lime, 6%);
+      background-color: $teal;
+      border-color: darken($teal, 15%);
     }
   }
 
@@ -87,12 +88,6 @@ ul.audit-locations {
       font-size: 1.2em;
       font-weight: 300;
       line-height: normal;
-
-      i.fa {
-        color: $light-gray;
-        font-size: 0.9em;
-        margin: 0 0.6em 0 0.7em;
-      }
     }
   }
 }

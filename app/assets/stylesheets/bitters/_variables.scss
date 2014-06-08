@@ -17,28 +17,33 @@ $base-border-radius: em(3);
 
 $dark-gray: #333;
 $medium-gray: rgb(180,180,180);
-$light-gray: #DDD;
+$light-gray: rgb(226, 230, 235);
 
 $light-red: #FBE3E4;
 $light-green: #E6EFC2;
 
 $aqua: #7FDBFF;
 $blue: #0074D9;
+$blue: #4CA0FF;
 $green: #2ECC40;
 $lime: #01FF70;
 $navy: #001F3F;
+$peach: #F7707D;
 $purple: #B10DC9;
-$teal: #39CCCC;
+$teal: #57DDCF;
 $yellow: #FFDC00;
 $light-yellow: lighten($yellow, 15%);
+$violet: #7767D9;
 
 // Body Color
 $base-body-color: white;
 
 //  Font Colors
 $base-font-color: $dark-gray;
+$base-font-color: rgb(67, 70, 76);
 $light-font-color: $medium-gray;
-$base-accent-color: $purple;
+$light-font-color: rgb(142, 151, 169);
+$base-accent-color: $blue;
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;
