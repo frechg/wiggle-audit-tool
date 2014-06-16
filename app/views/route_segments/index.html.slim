@@ -1,0 +1,16 @@
+- content_for :header do
+  = link_to bike_routes_path(@bike_route), class: 'back' do
+    i.fa.fa-angle-left
+  h1 = @bike_route.name
+
+.header-spacer
+
+.padded-wrapper
+  ul.audit-locations
+    - @route_segments.each do |route_segment|
+      li.location
+        = link_to bike_route_route_segment_path(@bike_route, route_segment) do
+          .status
+          .info
+            span.type =route_segment.type
+            h3 Market: #{route_segment.title}

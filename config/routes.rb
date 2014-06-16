@@ -1,8 +1,8 @@
 WiggleAuditTool::Application.routes.draw do
-  root 'pages#home'
+  root 'bike_routes#index'
 
-  get '/list', to: 'pages#list', as: 'list'
-  get '/audit', to: 'pages#audit', as: 'audit'
+  # get '/list', to: 'pages#list', as: 'list'
+  # get '/audit', to: 'pages#audit', as: 'audit'
 
   resources :bike_routes, only: [:index] do
     resources :route_segments, only: [:index, :show, :update]

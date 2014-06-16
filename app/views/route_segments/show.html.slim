@@ -1,0 +1,21 @@
+- content_for :header do
+  = link_to bike_route_route_segments_path(@bike_route), class: 'back' do
+    i.fa.fa-angle-left
+  .current-location
+    span.type = @route_segment.type
+    h2 = @route_segment.title
+
+.header-spacer
+
+.padded-wrapper
+  section.audit-questions
+    = form_for @route_segment do |f|
+      ul.questions
+        - @questions.each do |question|
+          li.question
+            p.question = question.title
+            .options-group
+              - question.answers.each do |answer|
+                .input-wrapper
+                  input name="whatever[answerings][#{ question.id }][answer_id]" type="radio" value="#{ answer.id }"
+                  label = answer.name

@@ -1,11 +1,13 @@
 class RouteSegmentsController < ApplicationController
   def index
     @route_segments = route_segments
+    @bike_route = bike_route
   end
 
   def show
     @route_segment = route_segment
     @questions = @route_segment.questions.includes(:answers)
+    @bike_route = bike_route
   end
 
   def update

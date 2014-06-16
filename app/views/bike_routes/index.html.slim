@@ -1,0 +1,19 @@
+- content_for :header do
+  h1 Wiggle Audit Tool
+
+section.home
+  .inner-wrapper
+    - @bike_routes.each do |route|
+      = link_to bike_route_route_segments_path(route), class: 'outbound-rl route-list' do
+        h2 =route.name
+        .stats
+          span.stat
+            | Blocks:
+            span.complete 0
+            | /
+            span 0
+          span.stat
+            | Intersections:
+            span.complete 0
+            | /
+            span 0
