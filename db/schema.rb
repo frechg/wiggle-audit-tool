@@ -11,9 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140615235623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: true do |t|
+    t.integer "question_id"
+    t.string  "title"
+    t.integer "score"
+  end
+
+  create_table "bike_routes", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "questions", force: true do |t|
+    t.string "route_segment_type"
+    t.string "title"
+  end
+
+  create_table "route_segment_answerings", force: true do |t|
+    t.integer "route_segment_id"
+    t.integer "answer_id"
+  end
+
+  create_table "route_segments", force: true do |t|
+    t.string  "type"
+    t.integer "sort_order"
+    t.integer "bike_route_id"
+    t.string  "title"
+  end
 
 end

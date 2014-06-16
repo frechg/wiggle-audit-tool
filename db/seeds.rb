@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Question.destroy_all
+Block.destroy_all
+
+question = Block.questions.new(title: 'Does this block have a bike lane?')
+question.answers = [
+  Answer.new(title: 'Yes', score: 3),
+  Answer.new(title: 'No', score: -1),
+]
+question.save!
+
+question = Block.questions.new(title: 'Does this block have a bike lane?')
+question.answers = [
+  Answer.new(title: 'Yes', score: 3),
+  Answer.new(title: 'No', score: -1),
+]
+question.save!
