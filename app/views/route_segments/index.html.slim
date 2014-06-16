@@ -7,10 +7,14 @@
 
 .padded-wrapper
   ul.audit-locations
-    - @route_segments.each do |route_segment|
-      li.location
-        = link_to bike_route_route_segment_path(@bike_route, route_segment) do
-          .status
-          .info
-            span.type =route_segment.type
-            h3 = route_segment.title
+    - if @route_segments.any?
+      - @route_segments.each do |route_segment|
+        li.location
+          = link_to bike_route_route_segment_path(@bike_route, route_segment) do
+            .status
+            .info
+              span.type =route_segment.type
+              h3 = route_segment.title
+    - else
+      li.empty
+        p.message No Blocks or Intersections for this route!

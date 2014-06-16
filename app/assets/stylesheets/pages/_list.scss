@@ -6,6 +6,16 @@ ul.audit-locations {
   margin: 0;
   padding: 0;
 
+  li.empty {
+    padding: 2em 1em;
+
+    p.message {
+      color: $light-font-color;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
   li.location {
     border-bottom: 1px solid $base-border-color;
     position: relative;
