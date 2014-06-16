@@ -55,4 +55,10 @@ section.audit-questions {
     margin: 0 0.4em 0.1em 0;
     vertical-align: middle;
   }
+
+  .submit-answers {
+    border-top: 1px solid $base-border-color;
+    margin-top: 1.2em;
+    padding: 1.2em 1em;
+  }
 }

@@ -9,7 +9,7 @@
 
 .padded-wrapper
   section.audit-questions
-    = form_for @route_segment do |f|
+    = simple_form_for @route_segment, url: bike_route_route_segment_path(@bike_route, @route_segment) do |f|
       ul.questions
         - @questions.each do |question|
           li.question
@@ -17,5 +17,13 @@
             .options-group
               - question.answers.each do |answer|
                 .input-wrapper
-                  input name="whatever[answerings][#{ question.id }][answer_id]" type="radio" value="#{ answer.id }"
-                  label = answer.name
+                  input(
+                    id="#{ answer.id }"
+                    name="whatever[answerings][#{ question.id }][answer_id}]"
+                    type="radio"
+                    value="#{ answer.id }"
+                  )
+                  label for="#{ answer.id }"
+                     =answer.title
+      .submit-answers
+        = f.button :submit
