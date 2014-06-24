@@ -1,13 +1,19 @@
 class RouteSegment < ActiveRecord::Base
-  delegate :questions, to: :class
-
-  def self.questions
-    Question.where(route_segment_type: name)
-  end
-
-  has_many :route_segment_answerings, dependent: :destroy
+  has_many :answerings, class_name: 'RouteSegmentAnswering', dependent: :destroy
   has_many :answers, through: :route_segment_answerings
   belongs_to :bike_route
+
+  def questions
+    Question.where(route_segment_type: type)
+  end
+
+  def complete?
+    questions.all? { |question| answering_by_question_id(question.id) }
+  end
+
+  def answering_by_question_id(question_id)
+    answerings.joins(:answer).readonly(false).find_by(answers: { question_id: question_id })
+  end
 
   def answer_for(question)
     answers.where(question_id: question)

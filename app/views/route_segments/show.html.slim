@@ -9,21 +9,11 @@
 
 .padded-wrapper
   section.audit-questions
-    = simple_form_for @route_segment, url: bike_route_route_segment_path(@bike_route, @route_segment) do |f|
-      ul.questions
-        - @questions.each do |question|
-          li.question
-            p.question = question.title
-            .options-group
-              - question.answers.each do |answer|
-                .input-wrapper
-                  input(
-                    id="#{ answer.id }"
-                    name="whatever[answerings][#{ question.id }][answer_id}]"
-                    type="radio"
-                    value="#{ answer.id }"
-                  )
-                  label for="#{ answer.id }"
-                     =answer.title
-      .submit-answers
-        = f.button :submit
+    ul.questions
+      - @route_segment.answerings.each do |answering|
+        li.question
+          p.question = answering.answer.question.title
+          p.answer = answering.answer.title
+      li
+        = link_to 'update', edit_bike_route_route_segment_path(@bike_route, @route_segment)
+

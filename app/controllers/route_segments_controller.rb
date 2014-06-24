@@ -4,19 +4,27 @@ class RouteSegmentsController < ApplicationController
     @bike_route = bike_route
   end
 
-  def show
+  def edit
     @route_segment = route_segment
     @questions = @route_segment.questions.includes(:answers)
     @bike_route = bike_route
   end
 
+  def show
+    @route_segment = route_segment
+    @bike_route = bike_route
+  end
+
   def update
     @route_segment = route_segment
-    params[:whatever][:answerings].each do |question_id, attrs|
-      answering = @route_segment.answerings.find_or_initialize_by(question_id: question_id)
+    params[:answerings].each do |question_id, attrs|
+      answering = @route_segment.answering_by_question_id(question_id) ||
+        @route_segment.answerings.build
       answering.answer_id = attrs[:answer_id]
       answering.save!
     end
+
+    redirect_to bike_route_route_segment_path(bike_route, @route_segment)
   end
 
   private

@@ -10,7 +10,7 @@
     - if @route_segments.any?
       - @route_segments.each do |route_segment|
         li.location
-          = link_to bike_route_route_segment_path(@bike_route, route_segment) do
+          = link_to route_segment_path(@bike_route, route_segment) do
             .status
             .info
               span.type =route_segment.type
