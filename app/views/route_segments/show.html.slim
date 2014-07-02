@@ -9,11 +9,14 @@
 
 .padded-wrapper
   section.audit-questions
+    .total-score
+      span Score:
+      strong No Score
     ul.questions
       - @route_segment.answerings.each do |answering|
         li.question
           p.question = answering.answer.question.title
           p.answer = answering.answer.title
-      li
-        = link_to 'update', edit_bike_route_route_segment_path(@bike_route, @route_segment)
+      li.redo
+        = link_to 'Redo Aduit', edit_bike_route_route_segment_path(@bike_route, @route_segment)
 

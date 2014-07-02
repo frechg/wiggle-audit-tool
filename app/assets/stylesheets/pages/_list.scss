@@ -67,7 +67,7 @@ ul.audit-locations {
     border-radius: 50%;
     z-index: 2;
 
-    &.finished {
+    &.complete {
       background-color: $teal;
       border-color: darken($teal, 15%);
     }
