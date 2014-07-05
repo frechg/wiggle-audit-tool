@@ -50,7 +50,7 @@ ul.audit-locations {
     > a {
       color: $base-font-color;
       display: block;
-      padding: 0.7em 1em 0.9em;
+      padding: 0.7em 1.8em 0.9em 1em;
       position: relative;
 
       &:hover {
@@ -63,13 +63,27 @@ ul.audit-locations {
     @include position(absolute, 1.2em 0 0 8px);
     @include size(20px);
     background-color: #fff;
-    border: 2px solid $base-border-color;
     border-radius: 50%;
+    border: 2px solid $base-border-color;
+    text-align: center;
     z-index: 2;
 
     &.complete {
       background-color: $teal;
       border-color: darken($teal, 15%);
+
+      span {
+        color: darken($teal, 25%);
+        display: inline-block;
+      }
+    }
+
+    span {
+      display: none;
+      font-size: 0.8em;
+      line-height: 20px;
+      position: relative;
+      top: -3px;
     }
   }
 
@@ -91,8 +105,9 @@ ul.audit-locations {
 
     h3 {
       font-size: 1.2em;
-      font-weight: 300;
+      font-weight: normal;
       line-height: normal;
+      letter-spacing: 1px;
     }
   }
 }

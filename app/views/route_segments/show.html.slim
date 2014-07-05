@@ -10,13 +10,15 @@
 .padded-wrapper
   section.audit-questions
     .total-score
-      span Score:
-      strong No Score
+      span Audit Score:
+      strong = @route_segment.total_score
     ul.questions
-      - @route_segment.answerings.each do |answering|
+      - @route_segment.answers.each do |answer|
         li.question
-          p.question = answering.answer.question.title
-          p.answer = answering.answer.title
+          p = answer.question.title
+          strong.answer
+            | #{answer.title}
+            |  (#{answer.score})
       li.redo
         = link_to 'Redo Aduit', edit_bike_route_route_segment_path(@bike_route, @route_segment)
 

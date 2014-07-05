@@ -17,14 +17,19 @@ class RouteSegmentsController < ApplicationController
 
   def update
     @route_segment = route_segment
-    params[:answerings].each do |question_id, attrs|
-      answering = @route_segment.answering_by_question_id(question_id) ||
-        @route_segment.answerings.build
-      answering.answer_id = attrs[:answer_id]
-      answering.save!
-    end
 
-    redirect_to bike_route_route_segment_path(bike_route, @route_segment)
+    if @route_segment.questions.length == params[:answerings].length
+      params[:answerings].each do |question_id, attrs|
+        answering = @route_segment.answering_by_question_id(question_id) ||
+          @route_segment.answerings.build
+        answering.answer_id = attrs[:answer_id]
+        answering.save!
+      end
+
+      redirect_to bike_route_route_segment_path(bike_route, @route_segment)
+    else
+      redirect_to edit_bike_route_route_segment_path(bike_route, route_segment)
+    end
   end
 
   private

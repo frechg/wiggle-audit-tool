@@ -1,6 +1,6 @@
 class RouteSegment < ActiveRecord::Base
   has_many :answerings, class_name: 'RouteSegmentAnswering', dependent: :destroy
-  has_many :answers, through: :route_segment_answerings
+  has_many :answers, through: :answerings
   belongs_to :bike_route
 
   def questions

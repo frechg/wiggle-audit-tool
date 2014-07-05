@@ -14,10 +14,10 @@ Intersection.destroy_all
 
 question = Question.new(route_segment_type: 'Block', title: 'Is there a bike lane present?')
 question.answers = [
-  Answer.new(title: 'Yes, colored and protected:', score: 5),
-  Answer.new(title: 'Yes, protected but not colored:', score: 3),
-  Answer.new(title: 'Yes, colored but not protected:', score: 2),
-  Answer.new(title: 'Yes, but not colored or protected:', score: 1),
+  Answer.new(title: 'Yes, colored and protected', score: 5),
+  Answer.new(title: 'Yes, protected but not colored', score: 3),
+  Answer.new(title: 'Yes, colored but not protected', score: 2),
+  Answer.new(title: 'Yes, but not colored or protected', score: 1),
   Answer.new(title: 'No', score: -1),
 ]
 question.save!
