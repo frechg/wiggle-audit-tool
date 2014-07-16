@@ -12,13 +12,13 @@ Intersection.destroy_all
 
 ##########################################################################
 
-question = Question.new(route_segment_type: 'Block', title: 'If the traffic is a wide curb lane are sharrows present?')
+question = Question.new(route_segment_type: 'Block', title: 'If the road is a shared lane are sharrows present?')
 question.answers = [
   Answer.new(title: 'Yes', score: 3),
   Answer.new(title: 'Yes, some colored', score: 4),
   Answer.new(title: 'Yes, all colored', score: 5),
   Answer.new(title: 'No', score: 1),
-  Answer.new(title: 'Not a wide curb lane', score: 0),
+  Answer.new(title: 'Not a shared lane', score: 0),
 ]
 question.save!
 
@@ -29,7 +29,7 @@ question.answers = [
   Answer.new(title: 'Yes, colored but not protected', score: 3),
   Answer.new(title: 'Yes, but not colored or protected', score: 2),
   Answer.new(title: 'No', score: 1),
-  Answer.new(title: 'This is a wide curb lane', score: 0),
+  Answer.new(title: 'This is a shared lane', score: 0),
 ]
 question.save!
 
