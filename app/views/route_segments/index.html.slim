@@ -11,10 +11,10 @@
       - @route_segments.each do |route_segment|
         li.location
           = link_to route_segment_path(@bike_route, route_segment) do
-            .status(class="#{'complete' if route_segment.complete?}")
+            .status(class="#{route_segment.type.downcase} #{'complete' if route_segment.complete?}")
               span.score = route_segment.total_score
             .info
-              span.type =route_segment.type
+              span.type = route_segment.type
               h3 = route_segment.title
     - else
       li.empty

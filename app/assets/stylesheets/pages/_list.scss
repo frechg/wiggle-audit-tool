@@ -68,12 +68,22 @@ ul.audit-locations {
     text-align: center;
     z-index: 2;
 
-    &.complete {
+    &.intersection.complete {
       background-color: $teal;
       border-color: darken($teal, 15%);
 
       span {
         color: darken($teal, 25%);
+        display: inline-block;
+      }
+    }
+
+    &.block.complete {
+      background-color: $peach;
+      border-color: darken($peach, 15%);
+
+      span {
+        color: darken($peach, 25%);
         display: inline-block;
       }
     }
