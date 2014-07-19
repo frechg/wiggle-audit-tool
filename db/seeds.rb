@@ -12,31 +12,52 @@ Intersection.destroy_all
 
 ##########################################################################
 
-question = Question.new(route_segment_type: 'Block', title: 'If the road is a shared lane are sharrows present?')
+question = Question.new(route_segment_type: 'Block', title: 'Traffic Mix: Count the number of large vehicles - bus, delivery truck, trolley etc. in 5 traffic signal cycles. The average number of large vehicles in cycles 1 - 5 is:')
 question.answers = [
-  Answer.new(title: 'Yes', score: 3),
-  Answer.new(title: 'Yes, some colored', score: 4),
-  Answer.new(title: 'Yes, all colored', score: 5),
-  Answer.new(title: 'No', score: 1),
-  Answer.new(title: 'Not a shared lane', score: 0),
+  Answer.new(title: '0 - 2', score: 4),
+  Answer.new(title: '3 - 5', score: 2),
+  Answer.new(title: '6+', score: 1),
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Block', title: 'Is there a bike lane present?')
+question = Question.new(route_segment_type: 'Block', title: 'Bicyclist travel on a local road with:')
 question.answers = [
-  Answer.new(title: 'Yes, colored and protected', score: 5),
-  Answer.new(title: 'Yes, protected but not colored', score: 4),
-  Answer.new(title: 'Yes, colored but not protected', score: 3),
-  Answer.new(title: 'Yes, but not colored or protected', score: 2),
-  Answer.new(title: 'No', score: 1),
-  Answer.new(title: 'This is a shared lane', score: 0),
+  Answer.new(title: 'Shared lane: no sharrows', score: 2),
+  Answer.new(title: 'Shared lane: skeleton sharrows', score: 3),
+  Answer.new(title: 'Shared lane: colored sharrows', score: 3.5),
+  Answer.new(title: 'Bike lane', score: 4),
+  Answer.new(title: 'Not a local road', score: 0),
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Block', title: 'Does the bike lane maintain consistent placement on the road?')
+question = Question.new(route_segment_type: 'Block', title: 'Bicyclist travel on an arterial road with:')
+question.answers = [
+  Answer.new(title: 'Shared lane: no sharrows', score: 1),
+  Answer.new(title: 'Shared lane: skeleton sharrows', score: 1.5),
+  Answer.new(title: 'Shared lane: colored sharrows', score: 2),
+  Answer.new(title: 'Bike lane: not colored or protected', score: 3),
+  Answer.new(title: 'Bike lane: colored not protected', score: 3.5),
+  Answer.new(title: 'Bike lane: protected not colored', score: 4.5),
+  Answer.new(title: 'Bike lane: protected and colored', score: 5),
+  Answer.new(title: 'Not an aterial road', score: 0),
+]
+question.save!
+
+question = Question.new(route_segment_type: 'Block', title: 'Is the bicycle space consistent?')
 question.answers = [
   Answer.new(title: 'Yes', score: 2),
-  Answer.new(title: 'No', score: 1),
+  Answer.new(title: 'No, it joggs left or right', score: 1),
+  Answer.new(title: 'No, bike lane changes to checkered green lane', score: 1),
+  Answer.new(title: 'No, bike lane changes to shared lane with colored sharrows', score: -1.5),
+  Answer.new(title: 'No, bike lane changes to shared lane with skeleton sharrows', score: -2),
+]
+question.save!
+
+question = Question.new(route_segment_type: 'Intersection', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
+question.answers = [
+  Answer.new(title: 'No tracks present', score: 4),
+  Answer.new(title: 'One set of tracks present', score: 2),
+  Answer.new(title: 'More than one set of tracks present', score: 1),
 ]
 question.save!
 
@@ -47,18 +68,10 @@ question.answers = [
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Block', title: 'Traffic Mix: Count the number of large vehicles - bus, delivery truck, trolley etc. in 5 traffic signal cycles. The average number of large vehicles in cycles 1 - 5 is:')
-question.answers = [
-  Answer.new(title: '0 - 2', score: 4),
-  Answer.new(title: '3 - 5', score: 2),
-  Answer.new(title: '6+', score: 1),
-]
-question.save!
-
 question = Question.new(route_segment_type: 'Block', title: 'Is there a transit stop?')
 question.answers = [
-  Answer.new(title: 'Yes', score: 2),
-  Answer.new(title: 'Yes, and the bus needs to cross a bike lane to reach the stop', score: 1),
+  Answer.new(title: 'Yes, and the bus does not enter bicycle space', score: 2),
+  Answer.new(title: 'Yes, and the bus crosses or stops in bicycle space.', score: 1),
   Answer.new(title: 'No', score: 3),
 ]
 question.save!
@@ -97,21 +110,23 @@ question.answers = [
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Intersection', title: 'Are there road markings to direct bike traffic?')
-question.answers = [
-  Answer.new(title: 'Yes', score: 2),
-  Answer.new(title: 'No', score: 0),
-]
-question.save!
-
 question = Question.new(route_segment_type: 'Intersection', title: 'Road Intersection Type:')
 question.answers = [
-  Answer.new(title: 'Local road (one traffic lane in each direction)', score: 4),
+  Answer.new(title: 'Local road (one traffic lane in each direction)', score: 3),
   Answer.new(title: 'Arterial road (multiple lanes in each direction)', score: 1),
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Intersection', title: 'Rails tracks in road way:')
+question = Question.new(route_segment_type: 'Intersection', title: 'Are there road markings to direct bike traffic?')
+question.answers = [
+  Answer.new(title: 'Yes, path continues in-line', score: 4),
+  Answer.new(title: 'Yes, path turns or changes placement on road', score: 3),
+  Answer.new(title: 'No, path continues in-line', score: 2),
+  Answer.new(title: 'No, path turns or changes placement on road', score: 1),
+]
+question.save!
+
+question = Question.new(route_segment_type: 'Intersection', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
 question.answers = [
   Answer.new(title: 'No tracks present', score: 4),
   Answer.new(title: 'One set of tracks present', score: 2),
@@ -119,7 +134,7 @@ question.answers = [
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Intersection', title: 'Are vehicular right turns are permitted?')
+question = Question.new(route_segment_type: 'Intersection', title: 'Are vehicular right turns permitted?')
 question.answers = [
   Answer.new(title: 'Yes, and there is a right turn signal or stop sign', score: 3),
   Answer.new(title: 'Yes, and the right turn yields to pedestrians', score: 2),
