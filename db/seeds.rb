@@ -53,7 +53,7 @@ question.answers = [
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Intersection', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
+question = Question.new(route_segment_type: 'Block', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
 question.answers = [
   Answer.new(title: 'No tracks present', score: 4),
   Answer.new(title: 'One set of tracks present', score: 2),
