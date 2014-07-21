@@ -12,7 +12,7 @@ Intersection.destroy_all
 
 ##########################################################################
 
-question = Question.new(route_segment_type: 'Block', title: 'Traffic Mix: Count the number of large vehicles - bus, delivery truck, trolley etc. in 5 traffic signal cycles. The average number of large vehicles in cycles 1 - 5 is:')
+question = Question.new(route_segment_type: 'Block', title: 'Traffic Mix: Average number of large vehicles - buses, delivery trucks, trollies etc. in 5 traffic signal cycles (or 3min if at stop sign):')
 question.answers = [
   Answer.new(title: '0 - 2', score: 4),
   Answer.new(title: '3 - 5', score: 2),
@@ -125,6 +125,14 @@ question.answers = [
   Answer.new(title: 'No, path turns or changes placement on road', score: 1),
 ]
 question.save!
+
+question = Question.new(route_segment_type: 'Block', title: 'Pavement Quality: (See images in audit package for reference)')
+question.answers = [
+  Answer.new(title: 'Road obstructions present', score: 1),
+  Answer.new(title: 'No road obstructions', score: 2),
+]
+question.save!
+
 
 question = Question.new(route_segment_type: 'Intersection', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
 question.answers = [
