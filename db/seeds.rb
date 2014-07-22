@@ -126,7 +126,7 @@ question.answers = [
 ]
 question.save!
 
-question = Question.new(route_segment_type: 'Block', title: 'Pavement Quality: (See images in audit package for reference)')
+question = Question.new(route_segment_type: 'Intersection', title: 'Pavement Quality: (See images in audit package for reference)')
 question.answers = [
   Answer.new(title: 'Road obstructions present', score: 1),
   Answer.new(title: 'No road obstructions', score: 2),
