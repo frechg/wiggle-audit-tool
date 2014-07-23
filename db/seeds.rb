@@ -55,9 +55,9 @@ question.save!
 
 question = Question.new(route_segment_type: 'Block', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
 question.answers = [
-  Answer.new(title: 'No tracks present', score: 4),
-  Answer.new(title: 'One set of tracks present', score: 2),
-  Answer.new(title: 'More than one set of tracks present', score: 1),
+  Answer.new(title: 'No', score: 3),
+  Answer.new(title: 'Yes, parallel tracks within 5 feet', score: 1),
+  Answer.new(title: 'Yes, bicyclists cross perpindicular tracks', score: 2),
 ]
 question.save!
 
@@ -70,8 +70,9 @@ question.save!
 
 question = Question.new(route_segment_type: 'Block', title: 'Is there a local road or ally way that feed into the bicyclists rout mid block?')
 question.answers = [
-  Answer.new(title: 'Yes', score: 1),
-  Answer.new(title: 'No', score: 2),
+  Answer.new(title: 'Yes, only 1', score: 2),
+  Answer.new(title: 'Yes, more than 1', score: 1),
+  Answer.new(title: 'No', score: 3),
 ]
 question.save!
 
