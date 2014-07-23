@@ -68,6 +68,13 @@ question.answers = [
 ]
 question.save!
 
+question = Question.new(route_segment_type: 'Block', title: 'Is there a local road or ally way that feed into the bicyclists rout mid block?')
+question.answers = [
+  Answer.new(title: 'Yes', score: 1),
+  Answer.new(title: 'No', score: 2),
+]
+question.save!
+
 question = Question.new(route_segment_type: 'Block', title: 'Is there a transit stop?')
 question.answers = [
   Answer.new(title: 'Yes, and the bus does not enter bicycle space', score: 2),
@@ -106,6 +113,7 @@ question = Question.new(route_segment_type: 'Intersection', title: 'Is there a b
 question.answers = [
   Answer.new(title: 'Yes, and it is colored', score: 3),
   Answer.new(title: 'Yes, but not colored', score: 2),
+  Answer.new(title: 'No, there is a stop sign', score: 2),
   Answer.new(title: 'No', score: 1),
 ]
 question.save!
@@ -136,9 +144,10 @@ question.save!
 
 question = Question.new(route_segment_type: 'Intersection', title: 'Cyclist avaiable road space is within aprox. 5 feet of or crosses railroad tracks?')
 question.answers = [
-  Answer.new(title: 'No tracks present', score: 4),
-  Answer.new(title: 'One set of tracks present', score: 2),
-  Answer.new(title: 'More than one set of tracks present', score: 1),
+  Answer.new(title: 'No tracks present', score: 5),
+  Answer.new(title: 'Parallel tracks present', score: 4),
+  Answer.new(title: 'Bicyclists cross one set of tracks', score: 3),
+  Answer.new(title: 'Bicyclists cross more than one set of tracks', score: 1),
 ]
 question.save!
 
