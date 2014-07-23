@@ -535,124 +535,64 @@ block.save!
 intersection = Intersection.new(title: 'Pierce and Waller', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Waller: Pierce to Potomac', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Waller and Potomac', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Waller: Potomac to Steiner', bike_route_id: inbound.id)
+block = Block.new(title: 'Waller: Pierce to Steiner', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: 'Waller and Steiner', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Steiner: Waller to Germania', bike_route_id: inbound.id)
+block = Block.new(title: 'Steiner: Waller to Duboce', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Germania and Steiner', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Duboce and Steiner/Sanchez', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Steiner: Germania to Hermann', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Hermann and Steiner', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Steiner: Hermann to Duboce', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Duboce and Steiner', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Duboce: Steiner to Sanchez', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Duboce and Sanchez', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Duboce: Sanchez to Belcher', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Duboce and Belcher', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Duboce: Belcher to Fillmore', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Fillmore and Duboce', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Duboce: Fillmore to Church', bike_route_id: inbound.id)
+block = Block.new(title: 'Duboce: Steiner/Sanchez to Church', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: 'Church and Duboce', bike_route_id: inbound.id)
 intersection.save!
 
-intersection = Intersection.new(title: 'Buchanan and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Buchanan/Duboce and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Buchanan to Laguna', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Duboce/Buchanan to Guerrero/Laguna', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Laguna and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Guerrero/Laguna and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Laguna to Octavia', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Guerrero/Laguna to Octavia', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: 'Octavia and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Octavia to Gough', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Octavia to Valencia', bike_route_id: inbound.id)
+block.save!
+
+intersection = Intersection.new(title: 'Valencia and Market', bike_route_id: inbound.id)
+intersection.save!
+
+block = Block.new(title: 'Market: Valencia to Gough', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: 'Gough and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Gough to Haight', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Haight and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Haight to Rose', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Rose and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Rose to Franklin', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Franklin and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Franklin to 12th', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Gough to 12th', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '12th and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 12th to Van Ness', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 12th to S Van Ness', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Van Ness and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'S Van Ness and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Van Ness to 11th', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: '11th and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: 11th to Fell', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Fell and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: 10th to Fell', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: S Van Ness to 10th', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '10th and Market', bike_route_id: inbound.id)
@@ -664,13 +604,7 @@ block.save!
 intersection = Intersection.new(title: '9th and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 9th to Hayes', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Hayes and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Hayes to 8th', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 9th to 8th', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '8th and Market', bike_route_id: inbound.id)
@@ -681,37 +615,25 @@ block.save!
 
 intersection = Intersection.new(title: '7th and Market', bike_route_id: inbound.id)
 intersection.save!
-block = Block.new(title: 'Market: 7th to Jones', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 7th to Jones/McAllister', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Jones and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Jones/McAllister and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Jones to McAllister', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'McAllister and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: McAllister to 6th', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Jones/McAllister to 6th', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '6th and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 6th to Mason', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 6th to Mason/Turk', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Mason and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Mason/Turk and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Mason to Turk', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Turk and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Turk to 5th', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Mason/Turk to 5th', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '5th and Market', bike_route_id: inbound.id)
@@ -723,31 +645,25 @@ block.save!
 intersection = Intersection.new(title: '4th and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 4th to OFarrell', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 4th to Grant/OFarrell', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'OFarrell and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Grant/OFarrell and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: OFarrell to 3rd', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Grant/OFarrell to 3rd/Kearny', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: '3rd and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: '3rd/Kearny and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 3rd to Geary', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 3rd/Kearny to (New) Montgomery', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Geary and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: '(New) Montgomery and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Geary to Montgomery', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Montgomery and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Montgomery to 2nd', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: (New) Montgomery to 2nd', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '2nd and Market', bike_route_id: inbound.id)
@@ -759,32 +675,26 @@ block.save!
 intersection = Intersection.new(title: 'Sutter and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Sutter to Battery', bike_route_id: inbound.id)
-block.save!
-
-intersection = Intersection.new(title: 'Battery and Market', bike_route_id: inbound.id)
-intersection.save!
-
-block = Block.new(title: 'Market: Battery to 1st', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Sutter to 1st', bike_route_id: inbound.id)
 block.save!
 
 intersection = Intersection.new(title: '1st and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: 1st to Front', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: 1st to Fremont/Front', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Front and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Fremont/Front and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Front to Beale', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Fremont/Front to Beale/Davis', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Beale and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Beale/Davis and Market', bike_route_id: inbound.id)
 intersection.save!
 
-block = Block.new(title: 'Market: Beale to Drumm', bike_route_id: inbound.id)
+block = Block.new(title: 'Market: Beale/Davis to Main/Drumm', bike_route_id: inbound.id)
 block.save!
 
-intersection = Intersection.new(title: 'Drumm and Market', bike_route_id: inbound.id)
+intersection = Intersection.new(title: 'Main/Drumm and Market', bike_route_id: inbound.id)
 intersection.save!
