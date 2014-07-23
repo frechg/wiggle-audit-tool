@@ -9,11 +9,11 @@ section.home
         .stats
           span.stat
             | Blocks:
-            span.complete 0
+            span.complete = route.completed_blocks?
             | /
             span = route.block_count
           span.stat
             | Intersections:
-            span.complete 0
+            span.complete = route.completed_intersections?
             | /
             span = route.intersection_count
