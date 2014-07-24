@@ -1,4 +1,5 @@
 WiggleAuditTool::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'bike_routes#index'
 
   resources :bike_routes, only: [:index] do
