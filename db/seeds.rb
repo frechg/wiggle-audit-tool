@@ -106,6 +106,7 @@ question.save!
 question = Question.new(route_segment_type: 'Intersection', title: 'Is there a leading signal to allow bikers to move first?')
 question.answers = [
   Answer.new(title: 'Yes', score: 2),
+  Answer.new(title: 'No, there is a stop sign', score: 2),
   Answer.new(title: 'No', score: 1),
 ]
 question.save!
