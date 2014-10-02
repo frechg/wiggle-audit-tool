@@ -1,6 +1,6 @@
 class RouteSegmentsController < ApplicationController
   def index
-    @route_segments = route_segments
+    @route_segments = route_segments.sort_by(&:sort_order)
     @bike_route = bike_route
   end
 
