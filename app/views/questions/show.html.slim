@@ -7,16 +7,18 @@ ul.answers
         | -
       span = answer.title
 
+section.data-set
 - @bike_routes.each do |route|
-  h2 = route.name
-  table.answer-matrix
-    - route.route_segments.where(type: @question.route_segment_type).sort_by{ |s| s.sort_order }.each do |segment|
-      tr
-        td = segment.title
-        - @answers.each do |a|
-          - if segment.answering_by_question_id(@question.id).answer_id == a.id
-            td class='colored score-#{a.score}'
-              = a.score
-          - else
-            td.empty
+  .table-wrapper
+    h2 = route.name
+    table.answer-matrix
+      - route.route_segments.where(type: @question.route_segment_type).sort_by{ |s| s.sort_order }.each do |segment|
+        tr
+          td = segment.title
+          - @answers.each do |a|
+            - if segment.answering_by_question_id(@question.id).answer_id == a.id
+              td class='colored score-#{a.score}'
+                = a.score
+            - else
+              td.empty
 

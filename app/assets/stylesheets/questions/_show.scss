@@ -1,3 +1,16 @@
+.data-set {
+  @include clearfix;
+}
+
+.table-wrapper {
+  float: left;
+  width: 48%;
+
+  &~ .table-wrapper {
+    margin-left: 4%;
+  }
+}
+
 table.answer-matrix {
   tr {
   }
@@ -5,15 +18,21 @@ table.answer-matrix {
   td {
     text-align: center;
 
+    &:first-child {
+      font-size: 0.8em;
+      text-align: left;
+      width: 60%;
+    }
+
     &.colored {
       background: $peach;
 
-      $highlight: darken($peach, 24%);
+      $highlight: darken($peach, 40%);
       $count: 0;
 
-      @for $i from 1 through 5 {
+      @for $i from -2 through 5 {
         $count: $count + 1;
-        $percent: percentage(($count * 12)/100);
+        $percent: percentage(($count * 10)/100);
 
         &.score-#{$i} {
           background: lighten($highlight, $percent);
