@@ -5,4 +5,6 @@ WiggleAuditTool::Application.routes.draw do
   resources :bike_routes, only: [:index] do
     resources :route_segments, only: [:index, :show, :edit, :update]
   end
+
+    resources :questions, only: [:index, :show]
 end

@@ -17,3 +17,13 @@ section.home
             span.complete = route.completed_intersections?
             | /
             span = route.intersection_count
+
+    = link_to questions_path, class: 'outbound-rl route-list' do
+      h2 Audit Questions
+      .stats
+        span.stat
+          | Block Questions:
+          span.complete = @block_question_total
+        span.stat
+          | Intersection Questions:
+          span.complete = @intersection_question_total
