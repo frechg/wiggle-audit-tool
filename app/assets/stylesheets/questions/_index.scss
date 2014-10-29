@@ -1,0 +1,28 @@
+.question-wrapper {
+  padding: 8em 0em;
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 1em;
+  }
+
+  article {
+    &~ article {
+      margin-top: 4em;
+    }
+  }
+
+  ul.questions {
+    li {
+      margin-bottom: 1em;
+
+      a {
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid $base-border-color;
+        display: block;
+        padding: 1em;
+      }
+    }
+  }
+}

@@ -1,12 +1,14 @@
-h2 Block Questions
-ul.block-questions
-  - @block_questions.each do |question|
-    li.question
-      = link_to question.title, question_path(question)
+.question-wrapper
+  article
+    h2 Block Questions:
+    ul.questions.block-questions
+      - @block_questions.each do |question|
+        li.question
+          = link_to question.title, question_path(question)
 
-h2 Intersection Questions
-ul.intersection-questions
-  - @intersection_questions.each do |question|
-    li.question
-      = link_to question.title, question_path(question)
-
+  article
+    h2 Intersection Questions:
+    ul.questions.intersection-questions
+      - @intersection_questions.each do |question|
+        li.question
+          = link_to question.title, question_path(question)

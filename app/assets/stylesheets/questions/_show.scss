@@ -1,3 +1,24 @@
+ul.answers {
+  background: #fff;
+  border: 1px solid $base-border-color;
+  border-radius: 3px;
+  margin-bottom: 2em;
+  padding: 1em;
+
+  li.answer {
+    margin-bottom: 0.4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span.score {
+      font-weight: bold;
+      margin-right: 0.4em;
+    }
+  }
+}
+
 .data-set {
   @include clearfix;
 }
@@ -13,13 +34,14 @@
 
 table.answer-matrix {
   tr {
+    line-height: 1em;
   }
 
   td {
     text-align: center;
 
     &:first-child {
-      font-size: 0.8em;
+      font-size: 0.9em;
       text-align: left;
       width: 60%;
     }
