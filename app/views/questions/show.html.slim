@@ -1,4 +1,9 @@
+- content_for :header do
+  = link_to questions_path, class: 'back' do
+    i.fa.fa-angle-left
+
 .question-wrapper
+  span #{@question.route_segment_type} Question:
   h2 = @question.title
   ul.answers
     - @answers.each do |answer|
