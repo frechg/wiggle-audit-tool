@@ -6,6 +6,8 @@
 .header-spacer
 
 .padded-wrapper
+  = link_to bike_route_path(@bike_route), class: "score-overview" do
+    span Score Overview
   ul.audit-locations
     - if @route_segments.any?
       - @route_segments.each do |route_segment|

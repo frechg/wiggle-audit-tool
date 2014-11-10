@@ -1,3 +1,23 @@
+a.score-overview {
+  background: #fff;
+  border: 1px solid $base-border-color;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  position: relative;
+
+  &:after {
+    @include position(absolute, 0.5em 0.3em 0 0);
+    content: '\f105';
+    color: $light-gray;
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 2em;
+  }
+}
+
 ul.audit-locations {
   background: #fff;
   border: 1px solid $base-border-color;

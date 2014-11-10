@@ -17,8 +17,6 @@ class BikeRoute < ActiveRecord::Base
     intersections.select(&:complete?).length
   end
 
-  private
-
   def blocks
     RouteSegment.where(bike_route_id: self.id, type: "Block")
   end

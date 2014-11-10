@@ -6,14 +6,15 @@
   | questions-show
 
 .question-wrapper
-  span.type #{@question.route_segment_type} Question
-  h2.title = @question.title
-  ul.answers
-    - @answers.each do |answer|
-      li.answer(class="score-#{answer.score}")
-        span.score
-          = answer.score
-        span.title = answer.title
+  header.legend
+    span.type #{@question.route_segment_type} Question
+    h2.title = @question.title
+    ul.answers
+      - @answers.each do |answer|
+        li.answer(class="score-#{answer.score}")
+          span.score
+            = answer.score
+          span.title = answer.title
 
   section.data-set
   - @bike_routes.each do |route|

@@ -1,0 +1,34 @@
+- content_for :header do
+  = link_to bike_route_path(@bike_route), class: 'back' do
+    i.fa.fa-angle-left
+
+- content_for :body_class do
+  | bike-route-show
+
+.scores-wrapper
+  header.legend
+    span.type Score Summary
+    h2.title = @bike_route.name
+
+  section.data-set
+    .table-wrapper
+      table.scores
+        thead
+          tr
+            td.segment Blocks
+            td Audit Score
+        - @blocks.each do |segment|
+          tr
+            td.segment = segment.title
+            td = segment.total_score
+
+    .table-wrapper
+      table.scores
+        thead
+          tr
+            td.segment Intersections
+            td Audit Score
+        - @intersections.each do |segment|
+          tr
+            td.segment = segment.title
+            td = segment.total_score

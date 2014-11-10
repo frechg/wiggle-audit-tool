@@ -3,6 +3,7 @@
   size: US-Letter portrait;
 }
 
+body.bike-route-show,
 body.questions-show {
   background: #fff;
 
@@ -15,31 +16,34 @@ body.questions-show {
     max-width: 60em;
   }
 
+  .scores-wrapper,
   .question-wrapper {
     padding: 4em 0em;
   }
 }
 
+.scores-wrapper,
 .question-wrapper {
+  header.legend {
+    margin-bottom: 2em;
+  }
+
   span.type {
     color: $light-font-color;
     display: inline-block;
     font-weight: bold;
     font-size: 0.8em;
     letter-spacing: 1px;
-    margin-bottom: 0.6em;
     text-transform: uppercase;
   }
 
   h2.title {
     font-size: 1.6em;
+    font-weight: 300;
   }
 }
 
 ul.answers {
-  border-radius: 3px;
-  margin-bottom: 1em;
-
   li.answer {
     background: #fff;
     border-radius: 3px;
@@ -60,7 +64,7 @@ ul.answers {
   }
 }
 
-.data-set {
+section.data-set {
   @include clearfix;
 }
 
@@ -72,18 +76,9 @@ ul.answers {
   &~ .table-wrapper {
     margin-left: 2%;
   }
-
-  h5 {
-    background: rgb(246,246,246);
-    border: 1px solid $base-border-color;
-    border-bottom: none;
-    border-radius: 2px 2px 0 0;
-    font-weight: bold;
-    font-size: 0.9em;
-    padding: 0.4em 0.6em 0.5em;
-  }
 }
 
+table.scores,
 table.answer-matrix {
   border-collapse: collapse;
   border: 1px solid $base-border-color;
