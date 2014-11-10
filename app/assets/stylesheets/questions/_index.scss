@@ -1,4 +1,5 @@
 .question-wrapper {
+  @include clearfix;
   padding: 8em 0em;
 
   h2 {

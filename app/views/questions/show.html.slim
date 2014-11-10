@@ -2,26 +2,36 @@
   = link_to questions_path, class: 'back' do
     i.fa.fa-angle-left
 
+- content_for :body_class do
+  | questions-show
+
 .question-wrapper
-  span #{@question.route_segment_type} Question:
-  h2 = @question.title
+  span.type #{@question.route_segment_type} Question
+  h2.title = @question.title
   ul.answers
     - @answers.each do |answer|
-      li.answer
-        span.score = answer.score
-        span - #{answer.title}
+      li.answer(class="score-#{answer.score}")
+        span.score
+          = answer.score
+        span.title = answer.title
 
   section.data-set
   - @bike_routes.each do |route|
     .table-wrapper
-      h5 = route.name
       table.answer-matrix
+        thead
+          tr
+            td.segment
+              = route.name
+            - @answers.each do |a|
+              td
+                = a.score
         - route.route_segments.where(type: @question.route_segment_type).sort_by{ |s| s.sort_order }.each do |segment|
           tr
-            td = segment.title
+            td.segment = segment.title
             - @answers.each do |a|
               - if segment.answering_by_question_id(@question.id).answer_id == a.id
                 td class='colored score-#{a.score}'
-                  = a.score
+                  span = a.score
               - else
                 td.empty
