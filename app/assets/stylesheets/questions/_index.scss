@@ -2,11 +2,6 @@
   @include clearfix;
   padding: 8em 0em;
 
-  h2 {
-    font-weight: 300;
-    margin-bottom: 1em;
-  }
-
   article {
     &~ article {
       margin-top: 4em;
@@ -14,15 +9,34 @@
   }
 
   ul.questions {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid $base-border-color;
+
     li {
-      margin-bottom: 1em;
+      border-bottom: 1px solid $base-border-color;
+
+      &:first-child {
+        padding: 1em;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      h2 {
+        font-weight: 300;
+        margin-bottom: 0;
+      }
 
       a {
-        background: #fff;
-        border-radius: 3px;
-        border: 1px solid $base-border-color;
+        color: $light-font-color;
         display: block;
         padding: 1em;
+
+        &:hover {
+          color: $base-accent-color;
+        }
       }
     }
   }

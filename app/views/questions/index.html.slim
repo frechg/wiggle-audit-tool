@@ -4,15 +4,17 @@
 
 .question-wrapper
   article
-    h2 Block Questions:
     ul.questions.block-questions
+      li.question
+        h2 Block Questions:
       - @block_questions.each do |question|
         li.question
           = link_to question.title, question_path(question)
 
   article
-    h2 Intersection Questions:
     ul.questions.intersection-questions
+      li.question
+        h2 Intersection Questions:
       - @intersection_questions.each do |question|
         li.question
           = link_to question.title, question_path(question)
