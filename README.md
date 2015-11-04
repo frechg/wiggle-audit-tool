@@ -10,8 +10,7 @@ on scoring of the block and intersection “route segments” that comprise a si
 route. For the audit of the Wiggle, both “inbound” and “outbound” travel
 directions where considered and audited.
 
-![Home
-Screen](https://github.com/frechg/wiggle-audit-tool/public/images/home.png)
+![Home Screen](https://github.com/frechg/wiggle-audit-tool/blob/master/public/images/home.png)
 
 In the “Route” view, each block and intersection for that route is displayed in
 an ordered list, such that the list of route segments reflect the order in which
@@ -19,16 +18,14 @@ an auditor would encounter route segments as they walk the route. Route segments
 are labeled “intersection” or “block” and display street names to help orient
 the auditor and support accurate scoring of each route segment.
 
-![Route
-Segments](https://github.com/frechg/wiggle-audit-tool/public/images/home.png)
+![Route Segments](https://github.com/frechg/wiggle-audit-tool/blob/master/public/images/home.png)
 
 After data for a route segment is entered, a score is generated based on the
 scoring system developed by Aliza and displayed along side the corresponding
 segment in the “Route” view. Display of the audit score and color highlighting
 indicates completion of a route segment.
 
-![Route Segments
-Completed](https://github.com/frechg/wiggle-audit-tool/public/images/home.png)
+![Route Segments Completed](https://github.com/frechg/wiggle-audit-tool/blob/master/public/images/home.png)
 
 To score a route segment the auditor needs to answer a set of questions. The
 questions refer to various physical characteristics of each block and
@@ -41,13 +38,11 @@ question order that reflected the most efficient way to move through the
 physical space of each route segment, greatly reducing the overall time to
 complete the audit.
 
-![Audit
-Questions](https://github.com/frechg/wiggle-audit-tool/public/images/home.png)
+![Audit Questions](https://github.com/frechg/wiggle-audit-tool/blob/master/public/images/home.png)
 
 After completing the audit of a route segment the auditor is shown the computed
 score and an overview of the data for double-checking. If any mistakes are
 noticed, the route segment can be re-scored. If a segment is re-scored all
 questions need to be re-answered for purposes of data quality.
 
-![Route Segment
-Review](https://github.com/frechg/wiggle-audit-tool/public/images/home.png)
+![Route Segment Review](https://github.com/frechg/wiggle-audit-tool/blob/master/public/images/home.png)
